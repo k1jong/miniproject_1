@@ -1,0 +1,32 @@
+create table BUPUM(
+BNAME varchar2(50) primary key ,
+BINVEN number(5),
+BSALES number(5)
+);
+
+create table custumer(
+CID number(3) primary key,
+CPHONE varchar2(11),
+CTIME date,
+CTYPE number(1)  default 0 check(ctype in (0,1)),
+CPRICE number(8),
+cpu varchar2(50),
+gpu varchar2(50),
+cme varchar2(50),
+cmb varchar2(50),
+ccase varchar2(50),
+cpw varchar2(50),
+cas varchar2(50)
+);
+
+create SEQUENCE auto_increase
+increment by 1
+start with 1
+maxvalue 999
+minvalue 1
+nocycle
+cache 2;
+
+
+--auto_increase.nextval 
+--ctype은 출고상태
